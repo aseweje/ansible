@@ -7,10 +7,10 @@ ADD www /www
 ADD nginx.conf /etc/nginx/
 ADD php-fpm.conf /etc/php5/php-fpm.conf
 ADD run.sh /run.sh
+RUN chmod u+x /run.sh
 
 ENV LISTEN_PORT=80
 
 EXPOSE 80
-RUN chmod u+x /run.sh
 CMD /run.sh
 
